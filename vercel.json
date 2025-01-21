@@ -1,14 +1,22 @@
 {
   "rewrites": [
-    { "source": "/:path*", "destination": "/index.html" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ],
-  "routes": [
+  "headers": [
     {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
     }
-  ]
+  ],
+  "build": {
+    "env": {
+      "VITE_SUPABASE_URL": "https://rqpvzywpmhhrwuhmpwpa.supabase.co",
+      "VITE_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJxcHZ6eXdwbWhocnd1aG1wd3BhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzcwMjY3OTUsImV4cCI6MjA1MjYwMjc5NX0.9DZIupZMYxC2k-oB4awfX7Y8ghBoSFpkQbvZx1LB_MY"
+    }
+  }
 } 
