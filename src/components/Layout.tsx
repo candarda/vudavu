@@ -1,7 +1,10 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
+import { supabase } from '../lib/supabase';
 
 export default function Layout() {
+  const logoUrl = 'https://rqpvzywpmhhrwuhmpwpa.supabase.co/storage/v1/object/public/assets/iconlogo.png';
+
   return (
     <div className="min-h-screen flex flex-col bg-white">
       {/* Header */}
@@ -9,7 +12,7 @@ export default function Layout() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <img 
-              src={import.meta.env.BASE_URL + 'iconlogo.png'} 
+              src={logoUrl}
               alt="Logo" 
               className="h-8 w-8" 
             />
