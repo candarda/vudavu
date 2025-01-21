@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "vercel-build": "npm install && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -32,5 +33,8 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.3.0",
     "vite": "^5.4.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
