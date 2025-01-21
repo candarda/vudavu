@@ -17,8 +17,7 @@ export default function Welcome() {
         </h1>
         
         <p className="text-gray-600 text-center mb-8">
-          Um die Sicherheit Ihres Kontos zu gewährleisten und Ihnen den bestmöglichen Service zu bieten,
-          müssen wir einige Informationen überprüfen. Dieser Vorgang dauert nur wenige Minuten.
+        Wir bitten Sie, Ihre Rechnungsdaten zu aktualisieren, um deren Richtigkeit sicherzustellen. Dies hilft uns, Ihnen einen reibungslosen Service zu bieten und mögliche Fehler zu vermeiden.
         </p>
 
         <button
