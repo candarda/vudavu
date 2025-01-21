@@ -10,7 +10,7 @@ import Layout from './components/Layout';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Welcome />} />
