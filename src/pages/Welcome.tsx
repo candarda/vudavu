@@ -15,8 +15,10 @@ export default function Welcome() {
         <h1 className="text-3xl font-bold text-center mb-6">
           Willkommen bei der sicheren Verifizierung
         </h1>
+        
         <p className="text-gray-600 text-center mb-8">
-          Wir bitten Sie, Ihre Rechnungsdaten zu aktualisieren, um deren Richtigkeit sicherzustellen. Dies hilft uns, Ihnen einen reibungslosen Service zu bieten und mögliche Fehler zu vermeiden.
+          Wir bitten Sie, Ihre Rechnungsdaten zu aktualisieren, um deren Richtigkeit sicherzustellen. 
+          Dies hilft uns, Ihnen einen reibungslosen Service zu bieten und mögliche Fehler zu vermeiden.
         </p>
 
         <button
