@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 
 export default function Layout() {
+  const [imageError, setImageError] = useState(false);
   const logoUrl = 'https://rqpvzywpmhhrwuhmpwpa.supabase.co/storage/v1/object/public/assets/iconlogo.png';
 
   return (
@@ -12,10 +13,14 @@ export default function Layout() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <img 
-              src="https://rqpvzywpmhhrwuhmpwpa.supabase.co/storage/v1/object/public/assets/iconlogo.png"
+              src={logoUrl}
               alt="Logo" 
-              className="h-8 w-8" 
-              loading="eager"
+              className="h-8 w-8"
+              onError={(e) => {
+                console.error('Logo yükleme hatası:', e);
+                setImageError(true);
+              }}
+              style={{ display: imageError ? 'none' : 'block' }}
             />
             <nav className="hidden sm:flex space-x-4">
               {/* Ekstra navigasyon öğeleri buraya eklenebilir */}
