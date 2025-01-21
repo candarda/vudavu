@@ -12,9 +12,10 @@ export default function Layout() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <img 
-              src={logoUrl}
+              src="https://rqpvzywpmhhrwuhmpwpa.supabase.co/storage/v1/object/public/assets/iconlogo.png"
               alt="Logo" 
               className="h-8 w-8" 
+              loading="eager"
             />
             <nav className="hidden sm:flex space-x-4">
               {/* Ekstra navigasyon öğeleri buraya eklenebilir */}
